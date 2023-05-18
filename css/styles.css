@@ -11,8 +11,22 @@
 body {
     background-color: #E5E5E5;
     font-family: "Roboto", sans-serif;
+
+  
     
 }
+::after  {  content: '';
+position: absolute;
+width:0;
+height: 4px;
+left: 0;
+top: 77px;
+color: var(--text-color);
+background: #2196F3;
+border-radius: 2px;
+transition: var(--transition);}
+
+
 .container {
 width: 1200px;
   margin: 0 auto;
@@ -70,26 +84,16 @@ html {
 }
 
 .nav-class a:active,
-.nav-class a:focus,
 .nav-class a:hover::after {
-  color: var(--text-color);
+color: var(--text-color);
   transition: var(--transition);
   width: 42px;
    
 }
-  
-.nav-class a::after {
-  content: '';
-position: absolute;
-width:0;
-height: 4px;
-left: 0;
-top: 77px;
-
-background: #2196F3;
-border-radius: 2px;
+.nav-class a:focus {
+  color: var(--transition);
 }
-
+ 
 
 
 .global-header .logo-class {
